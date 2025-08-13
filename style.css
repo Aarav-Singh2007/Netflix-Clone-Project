@@ -5,9 +5,13 @@
     margin: 0;
 }
 
+body {
+    background-color: black;
+}
+
 .main {
     background-image: url(assets/img/Netflix_background.jpg);
-    height: 80vh;
+    height: 90vh;
     position: relative;
     background-image: center center;
     background-repeat: no-repeat;
@@ -15,9 +19,9 @@
 }
 
 .main .box {
-    height: 80vh;
+    height: 90vh;
     width: 100%;
-    opacity: 0.6;
+    opacity: 0.65;
     background-color: black;
     position: absolute;
     top: 0%;
@@ -58,26 +62,75 @@ nav button {
     flex-direction: column;
     position: relative;
     color: white;
+    padding: 23px;
+
 
 }
 
-.hero :first-child {
+.hero> :first-child {
     font-weight: bolder;
     font-size: 56px;
-    
-    z-index: 10;
+    line-height: 70px;
+
     color: rgb(255, 255, 255);
-    
-    
+    text-align: center;
+
+
 
 }
-.hero :nth-child(n-2) {
+
+.hero> :nth-child(2) {
     font-weight: bolder;
     font-size: 56px;
-    
-    z-index: 10;
-    color: rgb(255, 255, 255);
-    
-    
+    line-height: 70px;
 
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+.hero> :nth-child(4) {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.curved-banner {
+    position: relative;
+    height: 150px;
+    background: linear-gradient(to bottom, #0a0f2c, #000);
+    overflow: hidden;
+}
+
+.curved-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black url('your-background-image.jpg') center/cover no-repeat;
+    clip-path: ellipse(100% 60% at 50% 0%);
+    z-index: 0;
+}
+
+.curved-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #ff0066, #ff3366);
+    border-radius: 50%;
+    transform: translateY(2px);
+    z-index: 1;
+    box-shadow: 5px 5px 15px blue;
 }
